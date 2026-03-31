@@ -49,4 +49,8 @@ CREATE TABLE Documents (
 INSERT INTO Scholarships (name, description, eligibility_criteria, amount) VALUES 
 ('Merit Scholarship', 'For students with excellent marks.', 'Marks > 90', 50000.00),
 ('Low Income Grant', 'For students from economically weaker sections.', 'Income < 100000', 30000.00),
-('General Scholarship', 'For general students pursuing higher education.', 'None', 15000.00);
+('General Scholarship', 'For general students pursuing higher education.', 'None', 15000.00),
+('National Merit Excellence Award', 'Prestigious award for top academic performers nationwide.', 'Marks > 90', 75000.00),
+('State General Development Fund', 'State sponsored assistance for students across all streams.', 'None', 20000.00),
+('Tech Innovators Merit Grant', 'For outstanding students pursuing technical education.', 'Marks > 90', 60000.00),
+('Community Low Income Support', 'Additional community-backed support for underprivileged backgrounds.', 'Income < 100000', 25000.00);

@@ -46,6 +46,7 @@ DUMMY_DIGILOCKER_DB = {
     "TEN1000005": ["marksheet_10"],
     "TEN1000006": ["marksheet_10"],
     "TEN1000007": ["marksheet_10"],
+    "20283848": ["marksheet_10"],
 
     # 7 12th Marksheet IDs
     "TWL1000001": ["marksheet_12"],
@@ -200,11 +201,11 @@ def get_recommendation():
         
         recommended = []
         for sch in scholarships:
-            if "Merit" in sch['name'] and marks >= 90:
+            if ("Merit" in sch['name'] or "Tech" in sch['name']) and marks >= 90:
                 recommended.append(sch)
-            elif "Low Income" in sch['name'] and income <= 100000:
+            elif ("Low Income" in sch['name'] or "Community" in sch['name']) and income <= 100000:
                 recommended.append(sch)
-            elif "General" in sch['name']:
+            elif "General" in sch['name'] or "State" in sch['name']:
                 recommended.append(sch)
 
         return jsonify({'recommendations': recommended})
