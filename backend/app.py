@@ -37,6 +37,8 @@ DUMMY_DIGILOCKER_DB = {
     "INC1000005": ["income"],
     "INC1000006": ["income"],
     "INC1000007": ["income"],
+    "TM-4201233026": ["income"],
+    "TM-420XXX3026": ["income"],
 
     # 7 10th Marksheet IDs
     "TEN1000001": ["marksheet_10"],
