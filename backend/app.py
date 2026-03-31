@@ -23,6 +23,11 @@ DUMMY_DIGILOCKER_DB = {
     "555555555555": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
     "666666666666": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
     "777777777777": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
+    "659035984247": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
+    "659035984742": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
+    "659035894247": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
+    "123412341234": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
+    "987698769876": ["income", "marksheet_10", "marksheet_12", "first_graduate"],
     
     # 7 Income Certificate IDs
     "INC1000001": ["income"],

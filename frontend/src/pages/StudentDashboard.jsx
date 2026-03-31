@@ -109,7 +109,8 @@ export default function StudentDashboard() {
     const hint = docType === 'income' ? 'e.g., INC1000001 or Aadhaar' 
                : docType === 'marksheet_10' ? 'e.g., TEN1000001 or Aadhaar'
                : docType === 'marksheet_12' ? 'e.g., TWL1000001 or Aadhaar'
-               : 'e.g., 111111111111';
+               : docType === 'first_graduate' ? 'e.g., 6590 3598 4247'
+               : 'e.g., 6590 3598 4247';
     const aadhar = window.prompt(`Enter your ID / Certificate Number for ${docType} (${hint}):`);
     if (!aadhar || aadhar.trim() === "") {
         return;
@@ -121,7 +122,7 @@ export default function StudentDashboard() {
             const res = await api.post('/digilocker/fetch', { 
                 student_id: user.id, 
                 doc_type: docType,
-                digilocker_id: aadhar.trim()
+                digilocker_id: aadhar.replace(/\s+/g, '')
             });
             fetchProfile(user.id);
             setFile(null);
@@ -141,7 +142,7 @@ export default function StudentDashboard() {
     { id: 'income', label: 'Income Certificate' },
     { id: 'marksheet_10', label: '10th Marksheet' },
     { id: 'marksheet_12', label: '12th Marksheet' },
-    { id: 'first_graduate', label: 'First Graduate Cert' }
+    { id: 'first_graduate', label: 'Aadhaar' }
   ];
   const uploadedDocs = profileStatus?.uploaded_docs || [];
   const digilockerDocs = profileStatus?.digilocker_docs || [];
